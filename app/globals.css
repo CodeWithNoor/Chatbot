@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer components{
+  .text-info{
+    @apply p-2 bg-gray-700/50 max-w-[300px] rounded-lg;
+  }
+  .chatRow{
+    @apply flex items-center justify-center space-x-2 px-5 py-2 text-sm rounded-lg cursor-pointer hover:bg-gray-700/70 text-gray-300 transition-all duration-200 ease-in-out;
+  }
+  .user_data{
+    @apply flex items-center justify-center space-x-2;
+  }
+  .logout{
+    @apply hover:bg-[#ffffff26] py-2 px-2 rounded-lg text-white; 
+  }
+  .chatting{
+    background-color:  rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 3px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+}
+/* 
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
